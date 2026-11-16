@@ -1,0 +1,14 @@
+### Gửi 1 lượt truy cập vào stream (body là MẢNG, time là mili-giây)
+POST https://f8fb6f6f730b404fb2f273fd789d04df.ingest.cloudflare.com
+content-type: application/json
+
+[
+  {
+    "id": "nhom-05-demo",
+    "country": "VN",
+    "device": "ios",
+    "ip": "123.45.67.89",
+    "time": 1791853920000,
+    "meta": { "key": "demo", "value": "100" }
+  }
+]

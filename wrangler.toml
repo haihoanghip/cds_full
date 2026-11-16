@@ -1,0 +1,35 @@
+name = "shop-cloudflare"
+main = "src/index.js"
+compatibility_date = "2026-10-19"
+account_id = "9c9b2a09a7ce503d87aaa3101f9306ed"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "APP_DB"
+database_name = "shop-cloudflare-db"
+database_id = "def8d624-4080-4228-92cb-d8135219d6c2"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "IMAGE_BUCKET"
+bucket_name = "shop-images"
+
+[[kv_namespaces]]
+binding = "APP_KV"
+id = "520196ae9525436699450762212066d4"
+
+[vars]
+# Stream ingest endpoint (ketnoi/inpo.txt)
+STREAM_URL = "https://f8fb6f6f730b404fb2f273fd789d04df.ingest.cloudflare.com"
+# Tên nhóm gửi vào trường id của stream dùng chung (vd. mẫu của giảng viên: "nhóm 05 CNTT K22E"). Để trống = dùng UUID.
+STREAM_GROUP_ID = "Nhóm 5 CNTT K22E"
+# R2 SQL để thống kê 24h (điền theo tài khoản của bạn)
+CF_ACCOUNT_ID = "9c9b2a09a7ce503d87aaa3101f9306ed"
+R2_SQL_BUCKET = "REPLACE_WITH_R2_DATA_CATALOG_BUCKET"
+R2_SQL_TABLE = "default.REPLACE_WITH_TABLE_NAME"
+# Secrets (không ghi vào file): R2_SQL_TOKEN, và STREAM_TOKEN nếu stream bật xác thực
