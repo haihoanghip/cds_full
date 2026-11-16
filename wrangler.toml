@@ -1,4 +1,4 @@
-name = "shop-cloudflare"
+name = "cds-full"
 main = "src/index.js"
 compatibility_date = "2026-10-19"
 account_id = "9c9b2a09a7ce503d87aaa3101f9306ed"
@@ -21,7 +21,7 @@ bucket_name = "shop-images"
 
 [[kv_namespaces]]
 binding = "APP_KV"
-id = "520196ae9525436699450762212066d4"
+id = "c68896c1ae8c420cb8cc4166a2bda89a"
 
 [vars]
 # Stream ingest endpoint (ketnoi/inpo.txt)
